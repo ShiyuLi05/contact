@@ -1,0 +1,139 @@
+@import url(./reset.css);
+
+:root {
+    --app-bg-black:#171a22;
+    --app-green:#009d5d;
+    --app-gray-hover:#696C76;
+    --app-green-hover:#007F42;
+    --app-border-radius:0.4rem;
+}
+
+body {
+    background-color: var(--app-bg-black);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+main {
+    padding: 1.5rem 0;
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+form {
+    margin: 0.8rem 0;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:60%;
+    height: 3.75rem;
+    border: none;
+    box-sizing: border-box;
+    border-radius: var(--app-border-radius);
+    margin-inline: auto;
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 80%;
+    padding: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--app-border-radius);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: left;
+}
+input[type='text']:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input[type="button"] {
+    width: 18%;
+    height: 80%;
+    text-align: center;
+    background-color:var(--app-green);
+    border: none;
+    border-radius: var(--app-border-radius);
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    transition: color 0.5s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+}
+input[type='button']:hover {
+    background-color: var(--app-green-hover);
+}
+
+.repository {
+    width: 100%;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    grid-template-rows: repeat(3, minmax(30%, 1fr));
+    gap: 1.2rem;
+    padding: 1.2rem;
+    border: none;
+    border-radius: var(--app-border-radius);
+    margin-bottom: 2rem;
+}
+
+.output {
+    width: 60%;
+    height: 3rem;
+    margin-inline: auto;
+    border: none;
+    text-align: center;
+    line-height: 3rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: default;
+}
+
+.count {
+    width: 9rem;
+    height: 3rem;
+    line-height: 3rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    border-radius:var(--app-border-radius);
+    background-color:var(--app-green);
+    color: #fff;
+    text-align: center;
+    margin-inline: auto;
+    cursor: default;
+}
+
+.grid {
+    border-radius: var(--app-border-radius);
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease-in-out;
+    padding: 1.5rem;
+    padding-top: 1.3rem;
+}
+p + p {
+    margin-top: 0.6rem;
+}
+.grid span {
+    font-weight: lighter;
+}
+.grid:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
