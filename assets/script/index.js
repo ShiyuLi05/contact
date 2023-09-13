@@ -100,6 +100,12 @@ onEvent('click', btn, function() {
     });
 });
 
+onEvent('keydown', input, function(e) {
+    if(e.keyCode == 13) {
+        btn.click();
+    }
+})
+
 function addContact(contactBox, obj) {
 
     let p1 = document.createElement('p');
