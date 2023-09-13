@@ -1,4 +1,5 @@
 'use strict';
+/* Shiyu Li*/
 
 function onEvent(event, selector, callback) {
     return selector.addEventListener(event, callback);
@@ -44,10 +45,6 @@ class Contact {
     }
     get email() {
         return this.#email;
-    }
-
-    getInfo() {
-        return`${this.#fullName}`;
     }
 }
 
